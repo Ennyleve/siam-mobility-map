@@ -1,6 +1,6 @@
 import folium
 
-# พิกัดที่คุณต้องการ
+# พิกัดที่ต้องการ
 location = [13.745880, 100.530489]  # จาก OpenStreetMap
 
 # สร้างแผนที่
@@ -11,3 +11,5 @@ folium.Marker(location).add_to(m)
 
 # บันทึกแผนที่เป็น HTML
 m.save("siam_square_map.html")
+
+print("Map has been saved as 'siam_square_map.html'")
