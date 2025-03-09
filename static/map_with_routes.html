@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_95a285e016767951f94e904bbfe855b5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_95a285e016767951f94e904bbfe855b5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_95a285e016767951f94e904bbfe855b5 = L.map(
+                "map_95a285e016767951f94e904bbfe855b5",
+                {
+                    center: [13.745, 100.529],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eae9b130333e2a4c32f8118e4a1b47f6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eae9b130333e2a4c32f8118e4a1b47f6.addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        function geo_json_8b93eb594c4e61232c6ee7f77616d40a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red"};
+            }
+        }
+
+        function geo_json_8b93eb594c4e61232c6ee7f77616d40a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8b93eb594c4e61232c6ee7f77616d40a = L.geoJson(null, {
+                onEachFeature: geo_json_8b93eb594c4e61232c6ee7f77616d40a_onEachFeature,
+            
+                style: geo_json_8b93eb594c4e61232c6ee7f77616d40a_styler,
+            ...{
+}
+        });
+
+        function geo_json_8b93eb594c4e61232c6ee7f77616d40a_add (data) {
+            geo_json_8b93eb594c4e61232c6ee7f77616d40a
+                .addData(data);
+        }
+            geo_json_8b93eb594c4e61232c6ee7f77616d40a_add({"bbox": [100.529182, 13.742735, 100.530758, 13.745893], "features": [{"bbox": [100.529182, 13.742735, 100.530758, 13.745893], "geometry": {"coordinates": [[100.529441, 13.744551], [100.529386, 13.744191], [100.529212, 13.743057], [100.529182, 13.742915], [100.53018, 13.742735], [100.530245, 13.743272], [100.53054, 13.745255], [100.530596, 13.745649], [100.530627, 13.745877], [100.530689, 13.745893], [100.530758, 13.745871], [100.530724, 13.74562], [100.530605, 13.744879], [100.530555, 13.744541]], "type": "LineString"}, "id": "0", "properties": {"extras": {"roadaccessrestrictions": {"summary": [{"amount": 77.26, "distance": 626.6, "value": 0.0}, {"amount": 22.74, "distance": 184.4, "value": 4.0}], "values": [[0, 3, 4], [3, 13, 0]]}}, "segments": [{"distance": 811.0, "duration": 103.5, "steps": [{"distance": 184.4, "duration": 33.2, "instruction": "Head south", "name": "-", "type": 11, "way_points": [0, 3]}, {"distance": 109.6, "duration": 15.8, "instruction": "Turn left onto \u0e0b\u0e2d\u0e22\u0e08\u0e38\u0e2c\u0e32\u0e25\u0e07\u0e01\u0e23\u0e13\u0e4c 12", "name": "\u0e0b\u0e2d\u0e22\u0e08\u0e38\u0e2c\u0e32\u0e25\u0e07\u0e01\u0e23\u0e13\u0e4c 12", "type": 0, "way_points": [3, 4]}, {"distance": 352.7, "duration": 34.5, "instruction": "Turn left onto \u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "name": "\u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "type": 0, "way_points": [4, 8]}, {"distance": 164.3, "duration": 20.0, "instruction": "Continue straight onto \u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "name": "\u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "type": 6, "way_points": [8, 13]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at \u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17, on the left", "name": "-", "type": 10, "way_points": [13, 13]}]}], "summary": {"distance": 811.0, "duration": 103.5}, "warnings": [{"code": 1, "message": "There may be restrictions on some roads"}], "way_points": [0, 13]}, "type": "Feature"}], "metadata": {"attribution": "openrouteservice.org | OpenStreetMap contributors", "engine": {"build_date": "2025-01-27T14:56:02Z", "graph_date": "2025-01-28T09:38:16Z", "version": "9.0.0"}, "query": {"coordinates": [[100.5284337, 13.7446961], [100.5309092, 13.7444913]], "format": "geojson", "profile": "driving-car", "profileName": "driving-car"}, "service": "routing", "timestamp": 1740410018192}, "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8b93eb594c4e61232c6ee7f77616d40a.addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        function geo_json_4e05e4859bc7debf24ef306c15e1423e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue"};
+            }
+        }
+
+        function geo_json_4e05e4859bc7debf24ef306c15e1423e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4e05e4859bc7debf24ef306c15e1423e = L.geoJson(null, {
+                onEachFeature: geo_json_4e05e4859bc7debf24ef306c15e1423e_onEachFeature,
+            
+                style: geo_json_4e05e4859bc7debf24ef306c15e1423e_styler,
+            ...{
+}
+        });
+
+        function geo_json_4e05e4859bc7debf24ef306c15e1423e_add (data) {
+            geo_json_4e05e4859bc7debf24ef306c15e1423e
+                .addData(data);
+        }
+            geo_json_4e05e4859bc7debf24ef306c15e1423e_add({"bbox": [100.529441, 13.742721, 100.530596, 13.746329], "features": [{"bbox": [100.529441, 13.742721, 100.530596, 13.746329], "geometry": {"coordinates": [[100.530555, 13.744541], [100.530506, 13.744214], [100.530457, 13.743898], [100.530294, 13.742763], [100.53029, 13.742721], [100.53018, 13.742735], [100.530245, 13.743272], [100.53054, 13.745255], [100.530596, 13.745649], [100.530398, 13.745954], [100.530288, 13.746089], [100.53014, 13.746272], [100.529815, 13.746329], [100.529697, 13.746225], [100.529441, 13.744551]], "type": "LineString"}, "id": "0", "properties": {"extras": {"roadaccessrestrictions": {"summary": [{"amount": 76.38, "distance": 664.3, "value": 0.0}, {"amount": 23.62, "distance": 205.5, "value": 4.0}], "values": [[0, 12, 0], [12, 14, 4]]}}, "segments": [{"distance": 869.8, "duration": 123.4, "steps": [{"distance": 204.4, "duration": 20.6, "instruction": "Head south on \u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "name": "\u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "type": 11, "way_points": [0, 4]}, {"distance": 339.2, "duration": 37.0, "instruction": "Continue straight onto \u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "name": "\u0e16\u0e19\u0e19\u0e1e\u0e0d\u0e32\u0e44\u0e17", "type": 6, "way_points": [4, 8]}, {"distance": 120.7, "duration": 28.9, "instruction": "Keep left", "name": "-", "type": 12, "way_points": [8, 12]}, {"distance": 205.5, "duration": 37.0, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [12, 14]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the right", "name": "-", "type": 10, "way_points": [14, 14]}]}], "summary": {"distance": 869.8, "duration": 123.4}, "warnings": [{"code": 1, "message": "There may be restrictions on some roads"}], "way_points": [0, 14]}, "type": "Feature"}], "metadata": {"attribution": "openrouteservice.org | OpenStreetMap contributors", "engine": {"build_date": "2025-01-27T14:56:02Z", "graph_date": "2025-01-28T09:38:16Z", "version": "9.0.0"}, "query": {"coordinates": [[100.5309092, 13.7444913], [100.5284337, 13.7446961]], "format": "geojson", "profile": "driving-car", "profileName": "driving-car"}, "service": "routing", "timestamp": 1740410018392}, "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4e05e4859bc7debf24ef306c15e1423e.addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+            var marker_4970337c9f372a1a91c10b03f88802a9 = L.marker(
+                [13.744551, 100.529441],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_f8e42a6da6bac855b43616c0d1d3b9ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b4b4a5f539fd503868a8ea0484b44c1 = $(`<div id="html_7b4b4a5f539fd503868a8ea0484b44c1" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_f8e42a6da6bac855b43616c0d1d3b9ba.setContent(html_7b4b4a5f539fd503868a8ea0484b44c1);
+            
+        
+
+        marker_4970337c9f372a1a91c10b03f88802a9.bindPopup(popup_f8e42a6da6bac855b43616c0d1d3b9ba)
+        ;
+
+        
+    
+    
+            var marker_a7b3258b0ed844016c913f06f131ed66 = L.marker(
+                [13.745649, 100.530596],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_49866805364d7179c789b8416251ae0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_496898257386140808c39c26608f6cdb = $(`<div id="html_496898257386140808c39c26608f6cdb" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_49866805364d7179c789b8416251ae0b.setContent(html_496898257386140808c39c26608f6cdb);
+            
+        
+
+        marker_a7b3258b0ed844016c913f06f131ed66.bindPopup(popup_49866805364d7179c789b8416251ae0b)
+        ;
+
+        
+    
+    
+            var marker_816c076f4d9410d0ebdfcc5d23813086 = L.marker(
+                [13.743272, 100.530245],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_ace14abbe67077c574d6d8012ab376bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c95c9c40c8bf730ad54ab937de99788a = $(`<div id="html_c95c9c40c8bf730ad54ab937de99788a" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_ace14abbe67077c574d6d8012ab376bf.setContent(html_c95c9c40c8bf730ad54ab937de99788a);
+            
+        
+
+        marker_816c076f4d9410d0ebdfcc5d23813086.bindPopup(popup_ace14abbe67077c574d6d8012ab376bf)
+        ;
+
+        
+    
+    
+            var marker_e58dc1f70bde797f3250a21de28b6b25 = L.marker(
+                [13.742735, 100.53018],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_15fc18c31ccadd7e8be5bd15c0947717 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24de12f61c4561b932f09bb939d09a4f = $(`<div id="html_24de12f61c4561b932f09bb939d09a4f" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_15fc18c31ccadd7e8be5bd15c0947717.setContent(html_24de12f61c4561b932f09bb939d09a4f);
+            
+        
+
+        marker_e58dc1f70bde797f3250a21de28b6b25.bindPopup(popup_15fc18c31ccadd7e8be5bd15c0947717)
+        ;
+
+        
+    
+    
+            var marker_393f6819710d5405f9973c4d71144f6e = L.marker(
+                [13.745255, 100.53054],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_3e960ab6aaeb2df3c2b78e7e7a667cb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7602716e0d1463d212c36fa4f89eb2e = $(`<div id="html_c7602716e0d1463d212c36fa4f89eb2e" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_3e960ab6aaeb2df3c2b78e7e7a667cb8.setContent(html_c7602716e0d1463d212c36fa4f89eb2e);
+            
+        
+
+        marker_393f6819710d5405f9973c4d71144f6e.bindPopup(popup_3e960ab6aaeb2df3c2b78e7e7a667cb8)
+        ;
+
+        
+    
+    
+            var marker_c46bfe40ce3b3692efbb56dfb123c96d = L.marker(
+                [13.744541, 100.530555],
+                {
+}
+            ).addTo(map_95a285e016767951f94e904bbfe855b5);
+        
+    
+        var popup_42a151057635fc772c344584c50f1706 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b2cf83df2623e86ef5b8b3909d79cc3 = $(`<div id="html_6b2cf83df2623e86ef5b8b3909d79cc3" style="width: 100.0%; height: 100.0%;">Overlap</div>`)[0];
+                popup_42a151057635fc772c344584c50f1706.setContent(html_6b2cf83df2623e86ef5b8b3909d79cc3);
+            
+        
+
+        marker_c46bfe40ce3b3692efbb56dfb123c96d.bindPopup(popup_42a151057635fc772c344584c50f1706)
+        ;
+
+        
+    
+</script>
+</html>
