@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siam Mobility Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col s12 m4 l3" id="checkout-form">
+            <h5>Address Descriptor Demo</h5>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" id="address-autocomplete">
+                    <label for="address-autocomplete">Address</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" id="city">
+                    <label for="city">City</label>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light blue" id="search-route">Search Route</button>
+        </div>
+        <div class="col s12 m8 l9">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXv6B3-306ADtnFdQFuq9WjB5iAWB2lUM&libraries=places"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
