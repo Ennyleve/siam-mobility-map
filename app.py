@@ -44,8 +44,32 @@ coordinates_2 = route_2['features'][0]['geometry']['coordinates']
 overlap_points = set(map(lambda p: (p[1], p[0]), coordinates_1)) & set(map(lambda p: (p[1], p[0]), coordinates_2))
 
 # วาดจุดทับซ้อนเป็นสีเขียว
-for lat, lon in overlap_points:
-    folium.Marker([lat, lon], popup="Overlap", icon=folium.Icon(color="green")).add_to(m)
+for i, (lat, lon) in enumerate(overlap_points):
+    if i == 2:
+        popup_text = "Siam Scape"  # ชื่อจุดแรก
+        image_url = "https://www.pmcuproperty.com/uploads/bu_index/313477896.jpg"
+    elif i == len(overlap_points) - 1:
+        popup_text = "National Stadium"  # ชื่อจุดสุดท้าย
+        image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/National_Stadium_Bangkok_%2835559665256%29.jpg/250px-National_Stadium_Bangkok_%2835559665256%29.jpg"
+    else:
+        popup_text = "MBK Center"  # จุดที่เหลือ
+        image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/MBK_CENTER_%288%29.jpg/300px-MBK_CENTER_%288%29.jpg"
+
+    folium.Marker([lat, lon], popup=popup_text, icon=folium.Icon(color="green")).add_to(m)
+    
+# สร้าง HTML สำหรับ Popup
+    popup_html = f"""
+    <h4>{popup_text}</h4>
+    <img src="{image_url}" width="200px">
+    <p>Latitude: {lat}, Longitude: {lon}</p>
+    """
+
+    folium.Marker(
+        [lat, lon],
+        popup=folium.Popup(popup_html, max_width=250),
+        icon=folium.Icon(color="green")
+    ).add_to(m)
+
 
 # route สำหรับหน้าแสดงแผนที่
 @app.route('/')
